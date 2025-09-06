@@ -1,0 +1,111 @@
+@use "index" as *;
+
+
+// Buttons
+
+[class*="button-"] {
+  a {
+    border: solid 1px;
+    padding: 24px 45px;
+    display: inline-block;
+    font-size: 20px;
+    font-weight: 700;
+    min-width: 250px;
+    text-align: center;
+    border-radius: 100px;
+    transition: $primary_transition;
+    text-decoration: none;
+    font-family: $heading_font;
+
+    @include respond(md, max) {
+
+      padding: 18px 45px;
+      font-size: 16px;
+    }
+  }
+}
+
+.button-1 {
+  a {
+    background-color: $quaternary_color;
+    color: $primary_color;
+    border-color: $quaternary_color;
+
+    &:hover {
+      background-color: $primary_color;
+      border-color: $primary_color;
+      color: $quaternary_color;
+    }
+  }
+}
+
+
+// Header css
+
+header {
+  &.header {
+    padding: 1.563vw 1.979vw;
+    position: fixed;
+    width: 100%;
+    top:0;
+    left: 0;
+    z-index: 3;
+  }
+}
+
+
+// Hero section css
+
+.hero-section {
+  height: 100vh;
+  position: relative;
+  overflow: hidden;
+  #bg-video{
+    position: absolute;
+    inset: 0;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    object-position: center;
+  }
+  .container{
+    height: 100%;
+    .inner{
+      position: relative;
+      height: inherit;
+      padding: 6.458vw 0;
+      .content-box{
+        flex-direction: column;
+        height: inherit;
+      }
+    }
+  }
+  h1{
+    .title-1{
+      color: $primary_color;
+    }
+    .title-2{
+      color: $secondary_color;
+      background-color: $tertiary_color;
+      transform: rotate(-2deg);
+      clip-path: polygon(100% 0, 0 0, 0 100%, 100% 100%),
+    
+    }
+  }
+  .content{
+    max-width: 520px;
+    width: 100%;
+    font-size: 20px;
+    color: $primary_color;
+    margin-top: 2.344vw;
+    @include respond(md, max) {
+      margin-top: 30px;
+    }
+  }
+  .button-1{
+    margin-top: 2.344vw;
+    @include respond(md, max) {
+      margin-top: 40px;
+    }
+  }
+}

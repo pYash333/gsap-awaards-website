@@ -1,0 +1,63 @@
+@mixin respond($breakpoint, $type: min) {
+  @if $breakpoint == sm {
+    @if $type == min {
+      @media (min-width: 576px) {
+        @content;
+      }
+    } @else if $type == max {
+      @media (max-width: 575px) {
+        @content;
+      }
+    }
+  }
+
+  @if $breakpoint == md {
+    @if $type == min {
+      @media (min-width: 768px) {
+        @content;
+      }
+    } @else if $type == max {
+      @media (max-width: 767px) {
+        @content;
+      }
+    }
+  }
+
+  @if $breakpoint == lg {
+    @if $type == min {
+      @media (min-width: 992px) {
+        @content;
+      }
+    } @else if $type == max {
+      @media (max-width: 991px) {
+        @content;
+      }
+    }
+  }
+
+  @if $breakpoint == xl {
+    @if $type == min {
+      @media (min-width: 1200px) {
+        @content;
+      }
+    } @else if $type == max {
+      @media (max-width: 1199px) {
+        @content;
+      }
+    }
+  }
+}
+
+// Custom min-width
+@mixin respond-min($size) {
+  @media (min-width: #{$size}) {
+    @content;
+  }
+}
+
+// Custom max-width
+@mixin respond-max($size) {
+  @media (max-width: #{$size}) {
+    @content;
+  }
+}

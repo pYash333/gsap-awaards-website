@@ -1,0 +1,30 @@
+@import url('https://fonts.googleapis.com/css2?family=Antonio:wght@100..700&display=swap');
+@font-face {
+  font-family: 'Proxima Nova Rg';
+  src: url('../fonts/ProximaNova-Regular.woff2') format('woff2'),
+      url('../fonts/ProximaNova-Regular.woff') format('woff');
+  font-weight: normal;
+  font-style: normal;
+  font-display: swap;
+}
+
+// Colors
+$primary_color: #523122;
+$secondary_color: #FAEADE;
+$tertiary_color: #A26833;
+$quaternary_color: #E3A458;
+$fifth_color: #FDEBD2;
+$sixth_color: #E8DDCA;
+$seventh_color: #222123;
+$eighth_color: #865720;
+$ninth_color: #C28C42;
+// $white_color: #fff;
+// $link_color: #ffffff;
+// $link_hover_color: #1f9eff;
+// $body_color: #393e42;
+// $heading_color: #393e42;
+// $white_color: #ffffff;
+
+$heading_font: "Antonio", sans-serif;
+$body_font: 'Proxima Nova Rg', serif;
+$primary_transition: 400ms;

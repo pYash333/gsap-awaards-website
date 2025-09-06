@@ -1,0 +1,16 @@
+
+@use "index" as *;
+
+.container{ margin-left:auto; margin-right:auto; padding-left:1.563vw; padding-right:1.563vw; max-width: 96.875vw; }
+
+
+.flex{display:flex}
+.row-reverse{flex-flow:row-reverse;}
+.align-center{align-items:center;}
+.align-top{align-items:flex-start;}
+.align-bottom{align-items:flex-end;}
+.justify-between{justify-content:space-between;}
+.justify-center{justify-content:center;}
+.justify-right{justify-content:flex-end;}
+.justify-left{justify-content:flex-start;}
+.row-wrap{flex-flow:row wrap;}
