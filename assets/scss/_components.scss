@@ -6,21 +6,30 @@
 [class*="button-"] {
   a {
     border: solid 1px;
-    padding: 24px 45px;
+    padding: 1.25vw 2.344vw;
     display: inline-block;
-    font-size: 20px;
+    font-size: 1.042vw;
     font-weight: 700;
-    min-width: 250px;
+    min-width: 13.021vw;
     text-align: center;
     border-radius: 100px;
     transition: $primary_transition;
     text-decoration: none;
     font-family: $heading_font;
 
-    @include respond(md, max) {
+    @include respond(xl, max) {
+      padding: 1.5vw 2.5vw;
+      font-size: 1.4vw;
+    }
 
-      padding: 18px 45px;
+    @include respond(lg, max) {
+      padding: 1.8vw 3vw;
+      font-size: 1.8vw;
+    }
+
+    @include respond(md, max) {
       font-size: 16px;
+      padding: 15px 40px;
     }
   }
 }
@@ -47,12 +56,31 @@ header {
     padding: 1.563vw 1.979vw;
     position: fixed;
     width: 100%;
-    top:0;
+    top: 0;
     left: 0;
     z-index: 3;
   }
 }
 
+
+.content {
+  max-width: 28vw;
+  width: 100%;
+  font-size: 1.042vw;
+  color: $primary_color;
+  margin-top: 2.344vw;
+
+  @include respond(xl, max) {
+    font-size: 1.5vw;
+    max-width: 48vw;
+  }
+
+  @include respond(md, max) {
+    margin-top: 30px;
+    font-size: 18px;
+    max-width: 500px;
+  }
+}
 
 // Hero section css
 
@@ -60,7 +88,8 @@ header {
   height: 100vh;
   position: relative;
   overflow: hidden;
-  #bg-video{
+
+  #bg-video {
     position: absolute;
     inset: 0;
     width: 100%;
@@ -68,44 +97,80 @@ header {
     object-fit: cover;
     object-position: center;
   }
-  .container{
+
+  .container {
     height: 100%;
-    .inner{
+
+    .inner {
       position: relative;
       height: inherit;
       padding: 6.458vw 0;
-      .content-box{
+
+      .content-box {
         flex-direction: column;
         height: inherit;
       }
     }
   }
-  h1{
-    .title-1{
+
+  h1 {
+    .title-1 {
       color: $primary_color;
     }
-    .title-2{
+
+    .title-2 {
       color: $secondary_color;
       background-color: $tertiary_color;
       transform: rotate(-2deg);
-      clip-path: polygon(100% 0, 0 0, 0 100%, 100% 100%),
-    
+      clip-path: polygon(100% 0, 0 0, 0 100%, 100% 100%);
+      backface-visibility: hidden;
+      transform-style: preserve-3d;
+      padding-bottom: 15px;
+
     }
   }
-  .content{
-    max-width: 520px;
-    width: 100%;
-    font-size: 20px;
-    color: $primary_color;
+
+  .button-1 {
     margin-top: 2.344vw;
-    @include respond(md, max) {
-      margin-top: 30px;
-    }
-  }
-  .button-1{
-    margin-top: 2.344vw;
+
     @include respond(md, max) {
       margin-top: 40px;
+    }
+  }
+}
+
+// Message section
+.message-section {
+  padding: 5.729vw 0 10.938vw;
+  min-height: 100dvh;
+  background-color: $tenth_color;
+  position: relative;
+
+  .container {
+    height: 100%;
+  }
+
+  .inner {
+    height: 100%;
+    flex-direction: column;
+
+    h2 {
+      color: $secondary_color;
+
+      .highlight-text {
+        color: $tenth_color;
+        background-color: $quaternary_color;
+        display: inline-block;
+        transform: scale(1.4) rotate(7deg);
+        font-size: 6.25vw;
+        position: relative;
+        z-index: 3;
+        padding: 0 5px 10px 0;
+      }
+    }
+
+    .content {
+      color: $secondary_color;
     }
   }
 }
